@@ -1,0 +1,3 @@
+title: ""
+type: "Assignment"
+lecture: ""

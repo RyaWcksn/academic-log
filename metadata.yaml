@@ -1,5 +1,5 @@
 campus: STMIK AMIK Bandung
-logo:  "$HOME/notes/notes/campus/logo.png"
+logo:  "./logo.png"
 author: Pramudya Arya Wicaksana
 studentnumber: 2242805
 faculty: INFORMATIKA
@@ -8,7 +8,7 @@ city: BANDUNG
 toc: true
 toi: true
 titlepage: true
-numbersections: true
+# numbersections: true
 papersize: a4
 geometry: margin=2cm
 documentclass: report

@@ -5,13 +5,15 @@ npm="2242805"
 
 mkdir build -p
 file="$1"
-filename=$(echo "$file" | cut -f 1 -d '.')
-pandoc $1 \
---filter pandoc-plot \
+filename="$(basename $file .md)"
+echo $filename
+
+pandoc -s $1 \
+--filter pandoc-citeproc \
 --from=markdown+tex_math_single_backslash+tex_math_dollars+raw_tex \
 --to=latex \
---output=build/${filename}-${name}-${npm}-${now}.pdf \
---template "$HOME/Notes/campus/template.tex" \
+--template "./assignment.tex" \
 --highlight-style tango \
---metadata-file "$HOME/Notes/campus/metadata.yaml" \
+--metadata-file "$(pwd)/metadata.yaml" \
+-o $(pwd)/build/${filename}-${name}-${npm}-${now}.pdf \
 --pdf-engine=xelatex

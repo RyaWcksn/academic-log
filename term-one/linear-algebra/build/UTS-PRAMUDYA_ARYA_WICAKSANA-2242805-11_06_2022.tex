@@ -1,0 +1,277 @@
+\documentclass[12pt, a4paper, onecolumn, oneside, final, bahasa]{report}
+\usepackage{graphics}
+\usepackage{wrapfig}
+\usepackage[indonesian]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{tgpagella}
+\usepackage{microtype}
+\usepackage{booktabs}
+
+\usepackage{upquote}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+
+\usepackage{upquote}
+\usepackage[utf8]{inputenc}
+\usepackage{eurosym}
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\usepackage{graphicx}
+\usepackage{float}
+\let\origfigure\figure
+\let\endorigfigure\endfigure
+\renewenvironment{figure}[1][2] {
+    \expandafter\origfigure\expandafter[H]
+} {
+    \endorigfigure
+}
+
+\usepackage[unicode=true]{hyperref}
+\hypersetup{breaklinks=true,
+            bookmarks=true,
+            pdfauthor={Pramudya Arya Wicaksana},
+            pdftitle={Ujian Tengah Semester},
+            colorlinks=true,
+            urlcolor=NavyBlue,
+            linkcolor=magenta,
+            pdfborder={0 0 0}}
+\urlstyle{same}
+
+
+
+
+\usepackage{enumerate}
+
+\title{Ujian Tengah Semester}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+
+ 
+    \usepackage{graphicx}
+    % Redefine \includegraphics so that, unless explicit options are
+    % given, the image width will not exceed the width or the height of the page.
+    % Images get their normal width if they fit onto the page, but
+    % are scaled down if they would overflow the margins.
+    \makeatletter
+    \def\ScaleWidthIfNeeded{%
+     \ifdim\Gin@nat@width>\linewidth
+        \linewidth
+      \else
+        \Gin@nat@width
+      \fi
+    }
+    \def\ScaleHeightIfNeeded{%
+      \ifdim\Gin@nat@height>0.9\textheight
+        0.9\textheight
+      \else
+        \Gin@nat@width
+      \fi
+    }
+    \makeatother
+
+    \setkeys{Gin}{width=\ScaleWidthIfNeeded,height=\ScaleHeightIfNeeded,keepaspectratio}%
+
+
+\usepackage[bf,tiny,center]{titlesec}
+\titleformat{\chapter}[display]
+  {\large \bfseries \centering}{\MakeUppercase{\chaptertitlename}\ \thechapter}{0pt}{\large\MakeUppercase}
+\titlespacing*{\chapter}{-10pt}{-20pt}{25pt}
+
+\begin{document}
+
+\begin{titlepage}
+    \pagenumbering{gobble}
+    \begin{center}
+        \begin{figure}
+            \begin{center}
+            % Logo
+                \includegraphics[width=2.5cm]{\$HOME/notes/notes/campus/logo.png}
+            \end{center}
+        \end{figure}
+        \vspace*{0cm}
+        \textbf{STMIK AMIK Bandung} \\
+        \textbf{Ujian Tengah Semester} \\[1.0cm]
+        \vspace*{2.5cm}
+        \textbf{UTS} \\
+        \vspace*{3 cm}       
+        \textbf{Pramudya Arya Wicaksana} \\
+        \textbf{2242805} \\
+        \vspace*{5.0cm}
+        \textbf{
+            FAKULTAS INFORMATIKA \\
+            PROGRAM STUDI TEKNIK INFORMATIKA \\
+            BANDUNG
+        }
+    \end{center}
+\end{titlepage}
+\pagenumbering{roman}
+\setcounter{page}{2}
+
+
+{
+    \hypersetup{linkcolor=black}
+    \tableofcontents
+}
+
+    \hypersetup{linkcolor=black}
+    \listoffigures
+
+
+
+\newpage
+\pagenumbering{arabic}
+
+\textbf{PENGERJAAN UJIAN LINEAR ALGEBRA UNTUK MEMENUHI KEWAJIBAN
+SEMESTER 1 JURUSAN TEKNIK INFORMATIKA}\\
+\textbf{PENGERJAAN MENGGUNAKAN LATEX DAN TEXT EDITOR}
+
+\hypertarget{pertanyaan-pertama}{%
+\chapter{Pertanyaan pertama}\label{pertanyaan-pertama}}
+
+\hypertarget{soal}{%
+\section{Soal}\label{soal}}
+
+\begin{figure}
+\centering
+\includegraphics{/home/aya/Pictures/Screenshots/Screenshot_Wed-02_Nov_22_22.00.png}
+\caption{pertama}
+\end{figure}
+
+\hypertarget{jawab}{%
+\section{Jawab}\label{jawab}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\tightlist
+\item
+  \(\mathbf{BA}\) = \(B_{4x5} A_{4x5}\), Tidak dapat dilakukan
+\item
+  \(\mathbf{AB}^\intercal\) =
+  \(A_{4x5} B^\intercal_{5x4} AB^\intercal{4x4}\), Terdefinisikan dengan
+  ordo \(\mathbf{4x4}\)
+\item
+  \(\mathbf{AC+D}\) =
+  \((A_{4x5}C_{5x2}) + D_{4x2} = AC_{4x2} + D_{4x2} = AC+D_{4x2}\),
+  Terdefinisikan dengan ordo \(\mathbf{4x2}\)
+\item
+  \(\mathbf{E(AC)}\) =
+  \(E_{5x4}(A_{4x5}B_{4x5}) = E_{5x4}AB_{4x5} = E(AC)_{5x2}\),
+  Terdefinisikan dengan ordo \(\mathbf{5x2}\)
+\item
+  \(\mathbf{A-3E^\intercal}\) =
+  \(A_{4x5} - 3(E^intercal_{5x4}) = A_{4x5} - 3E^\intercal_{5x4} = A-3E^\intercal_{4x5}\),
+  Terdefinisikan dengan ordo \(\mathbf{4x5}\)
+\end{enumerate}
+
+\hypertarget{pertanyaan-kedua}{%
+\chapter{Pertanyaan kedua}\label{pertanyaan-kedua}}
+
+\hypertarget{soal-1}{%
+\section{Soal}\label{soal-1}}
+
+\begin{figure}
+\centering
+\includegraphics{/home/aya/Pictures/Screenshots/Screenshot_Wed-02_Nov_22_22.40.png}
+\caption{kedua}
+\end{figure}
+
+\hypertarget{jawab-1}{%
+\section{Jawab}\label{jawab-1}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(D=\begin{bmatrix} 1 & 5 & 2 \\ -1 & 0 & 1 \\ 3 & 2 & 4 \end{bmatrix}\)
+  +
+  \(E=\begin{bmatrix} 6 & 1 & 3 \\ -1 & 1 & 2 \\ 4 & 1 & 3 \end{bmatrix}\)
+  =
+  \(\begin{bmatrix} 7 & 6 & 5 \\ -2 & 1 & 3 \\ 7 & 3 & 7 \end{bmatrix}\)
+\item
+  \(2\begin{bmatrix} 4 & -1 \\ 0 & 2 \end{bmatrix} -\begin{bmatrix} 1 & 4 & 2 \\ 3 & 1 & 5 \end{bmatrix}\)\\
+  \(2\begin{bmatrix} 8 & -2 \\ 2 & 4 \end{bmatrix} -\begin{bmatrix} 1 & 4 & 2 \\ 3 & 1 & 5 \end{bmatrix}\)
+  Matrix 2B dan C tidak bisa dikurangkan karena elementnya berbeda
+  \emph{2x2} \& \emph{3x2}
+\item
+  \(2E=\begin{bmatrix} 6 & 1 & 3 \\ -1 & 1 & 2 \\ 4 & 1 & 3 \end{bmatrix} = E=\begin{bmatrix} 12 & 2 & 6 \\ -2 & 2 & 4 \\ 8 & 2 & 6 \end{bmatrix}\)\\
+  \(-3\begin{pmatrix} \begin{bmatrix} 1 & 5 & 2 \\ -1 & 0 & 1 \\ 3 & 2 & 4 \end{bmatrix} +\begin{bmatrix} 12 & 2 & 6 \\ -2 & 2 & 4 \\ 8 & 2 & 6 \end{bmatrix} \end{pmatrix} =\begin{bmatrix} -39 & -21 & -24 \\ 9 & -6 & -15 \\ -33 & -12 & -30 \end{bmatrix}\)
+\item
+  \(2\begin{bmatrix} 3 & -1 & 1 \\ 0 & 2 & 1 \end{bmatrix} +\begin{bmatrix} 1 & 4 & 2 \\ 3 & 1 & 5 \end{bmatrix}\)\\
+  \(\begin{bmatrix} 6 & -2 & 2 \\ 0 & 4 & 2 \end{bmatrix} +\begin{bmatrix} 1 & 4 & 2 \\ 3 & 1 & 5 \end{bmatrix}\)\\
+  \(\begin{bmatrix} 7 & 2 & 4 \\ 3 & 5 & 7 \end{bmatrix}\)
+\item
+  \(D^\intercal-E^\intercal\)\\
+  \(\begin{bmatrix} 1 & -1 & 3 \\ 5 & 0 & 2 \\ 2 & 1 & 4 \end{bmatrix} -\begin{bmatrix} 6 & -1 & 4 \\ 1 & 1 & 2 \\ 3 & 1 & 3 \end{bmatrix} =\begin{bmatrix} -5 & 0 & -1 \\ 4 & -1 & 0 \\ -1 & 2 & 1 \end{bmatrix}\)
+\item
+  \(\begin{pmatrix} \begin{bmatrix} 1 & 5 & 2 \\ -1 & 0 & 1 \\ 3 & 2 & 4 \end{bmatrix} \begin{bmatrix} 6 & 1 & 3 \\ -1 & 1 & 2 \\ 4 & 1 & 3 \end{bmatrix} \end{pmatrix}^\intercal =\begin{pmatrix} \begin{bmatrix} -5 & 4 & -1 \\ 0 & -1 & -1 \\ -1 & 1 & 1 \end{bmatrix} \end{pmatrix}^\intercal\)\\
+  \(\begin{bmatrix} -5 & 0 & -1 \\ 4 & -1 & 1 \\ -1 & -1 & 1 \end{bmatrix}\)
+\item
+  \(\begin{bmatrix} 4 & -1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 3 & 0 \\ -1 & 2 \\ 1 & 1 \end{bmatrix}\)
+\end{enumerate}
+
+Element ada matrices A dan B berbeda, jadi tidak bisa dikalikan
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\setcounter{enumi}{7}
+\item
+  \(\begin{bmatrix} 3 & 0 \\ -1 & 2 \\ 1 & 1 \end{bmatrix} \begin{pmatrix} \begin{bmatrix} 4 & -1 \\ 0 & 2 \end{bmatrix} \begin{bmatrix} 1 & 4 & 2 \\ 3 & 1 & 5 \end{bmatrix} \end{pmatrix}\)\\
+  \(\begin{bmatrix} 1 & 15 & 3 \\ 6 & 2 & 10 \end{bmatrix} =\begin{bmatrix} 3 & 45 & 9 \\ 11 & -11 & 19 \\ 7 & 17 & 13 \end{bmatrix}\)
+\item
+  \(\begin{bmatrix} 1 & 4 & 2 \\ 3 & 1 & 5 \end{bmatrix} \begin{bmatrix} 3 & 0 \\ -1 & 2 \\ 1 & 1 \end{bmatrix} =\begin{bmatrix} 1 & 7 \\ 13 & 7 \end{bmatrix}\)
+\item
+  \(\begin{pmatrix} \begin{bmatrix} 1 & 5 & 2 \\ -1 & 0 & 1 \\ 3 & 2 & 4 \\ \end{bmatrix} \begin{bmatrix} 3 & 0 \\ -1 & 2 \\ 1 & 1 \end{bmatrix} \end{pmatrix}^\intercal\)\\
+  \(\begin{bmatrix} 0 & 12\\ -2 & 1 \\ 11 & 8 \end{bmatrix} \begin{bmatrix} 0 & -2 & 11\\ 12 & 1 & 8 \end{bmatrix}\)
+\item
+  \(\begin{pmatrix} \begin{bmatrix} 3 & 0 \\ -1 & 2 \\ 1 & 1 \end{bmatrix} \begin{bmatrix} 4 & -1 \\ 0 & 2 \end{bmatrix} \end{pmatrix} \begin{bmatrix} 1 & 4 & 2 \\ 3 & 1 & 5 \end{bmatrix}\)\\
+  \(\begin{pmatrix} \begin{bmatrix} 12 & -3 \\ -4 & 5 \\ 4 & 1 \\ \end{bmatrix} \end{pmatrix} \begin{bmatrix} 1 & 4 & 2 \\ 3 & 1 & 5 \end{bmatrix}\)\\
+  \(\begin{bmatrix} 3 & 11 & 7 \\ 45 & -11 & 17 \\ 9 & 17 & 13 \end{bmatrix}\)
+\end{enumerate}
+
+\hypertarget{pertanyaan-ketiga}{%
+\chapter{Pertanyaan ketiga}\label{pertanyaan-ketiga}}
+
+\hypertarget{soal-2}{%
+\section{Soal}\label{soal-2}}
+
+\begin{figure}
+\centering
+\includegraphics{/home/aya/Pictures/Screenshots/Screenshot_Wed-02_Nov_22_23.51.png}
+\caption{kedua}
+\end{figure}
+
+\hypertarget{jawab-2}{%
+\section{Jawab}\label{jawab-2}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  \(5x1+6x2-7x3 = 2\)\\
+  \(-x1-2x2+3x3 = 0\)\\
+  \(4x2-x3 = 3\)\\
+  \(5x1+6x2-7x3=2\)
+\item
+  \(5x-3y-6z = -9\)\\
+  \(2x+3y = 2\)\\
+  \(3x-6z = -11\)
+\item
+  \(2x+3y = 2\)\\
+  \(2x = 2 - 3y\)\\
+  \(x = 1 - \frac{3}{2y}\)
+\item
+  \(x+y+z = 2\)\\
+  \(1-\frac{3}{2y}+y+z = 2\)\\
+  \(1-\frac{1}{2y}+z = 2\)\\
+  \(\frac{1}{2y}+z = 1\)
+\item
+  \(5x-3y-6z = -9\)\\
+  \(5(1-\frac{3}{2y})-3y-6z = -9\)\\
+  \(5(\frac{15}{2y})-3y-6z = -9\)\\
+  \(\frac{21}{2y}-6z = -14\)
+\end{enumerate}
+\end{document}

@@ -1,0 +1,16 @@
+# ASSIGNMENT TWO
+
+Author : Pramudya Arya Wicaksana
+NIM : 2242805
+
+## 1. INSERT FROM HEAD
+
+![DSC_0320](DSC_0320.JPG)
+
+## 2. INSERT FROM MIDDLE
+
+![DSC_0320](../../../DSC_0320.JPG)
+
+## 3. INSERT FROM TAIL
+
+![DSC_0321](../../../DSC_0321.JPG)
