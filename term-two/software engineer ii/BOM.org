@@ -1,0 +1,6 @@
+#+AUTHOR: Pramudya Arya Wicaksana
+#+TITLE: Business Object Model
+#+SETUPFILE: ~/.emacs.d/setupfile.org
+
+
+* Graph

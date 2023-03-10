@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// SECURITY RISK!}
+\PYG{n+nx}{rows}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{err}\PYG{+w}{ }\PYG{o}{:=}\PYG{+w}{ }\PYG{n+nx}{db}\PYG{p}{.}\PYG{n+nx}{Query}\PYG{p}{(}\PYG{n+nx}{fmt}\PYG{p}{.}\PYG{n+nx}{Sprintf}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}SELECT * FROM user WHERE id = \PYGZpc{}s\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{id}\PYG{p}{))}
+\end{Verbatim}

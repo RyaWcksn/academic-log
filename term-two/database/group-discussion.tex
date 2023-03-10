@@ -1,0 +1,198 @@
+% Created 2023-03-10 Jum 23:43
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{minted}
+\makeatletter
+\renewcommand{\maketitle}{
+\begin{titlepage}
+\begin{center}
+\Huge \textbf{ASSIGNMENT} \\
+\vspace{1em}
+\Huge \textbf{\@title} \\
+\bigbreak
+\vspace{2em}
+\includegraphics[width=8em]{~/.emacs.d/logo.png} \\
+\bigbreak
+\vspace{1em}
+\Large \textbf{\@author} \\
+\large 2242805  \\
+\bigbreak
+\vspace{4em}
+\large Teknik Informatika \\
+\large STMIK AMIK Bandung \\
+\Large \@date \\
+\end{center}
+\end{titlepage}
+}
+\renewcommand{\pagenumbering{arabic}}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyfoot[L]{\@author}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{\href{mailto:pram.aryawcksn@protonmail.ch}{pram.aryawcksn@protonmail.ch}}}
+\usepackage{amssymb,amsmath}
+\usepackage{minted}
+\usepackage[utf8]{inputenc}
+\usepackage{graphicx}
+\usepackage{amsmath, amsthm, amssymb}
+\usepackage[table, xcdraw]{xcolor}
+\hypersetup{colorlinks=true,linkcolor=black}
+\let\oldsection\section
+\renewcommand\section{\clearpage\oldsection}
+\author{Pramudya Arya Wicaksana}
+\date{\today}
+\title{Database security\\\medskip
+\large Database security assignment to fulfill the criteria for the Database Fundamentals course in the Informatics program}
+\hypersetup{
+ pdfauthor={Pramudya Arya Wicaksana},
+ pdftitle={Database security},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+\setlength\parindent{0pt}
+
+
+\section{Sql Injection}
+\label{sec:orga50eb9c}
+
+SQL injection is a type of attack on a database-driven application that allows an attacker to execute unauthorized SQL commands by injecting malicious SQL statements into an application's input fields. SQL injection occurs when an attacker can input data into an application without proper input validation, such as input sanitization, and then that input is passed to the application's SQL query.\\
+
+Example of popular SQL Injection code\\
+
+\begin{minted}[]{sql}
+' OR 1=1 --
+\end{minted}
+
+This code is designed to manipulate the application's SQL query by injecting a condition that is always true, such as 1=1. The double dash at the end is used to comment out the rest of the SQL code, effectively neutralizing it. This SQL code would then be executed by the application, potentially granting the attacker access to sensitive data or control over the database.\\
+
+SQL Injection attacks can be prevented through various measures such as using prepared statements with parameterized queries, validating and sanitizing user inputs, limiting database privileges, and avoiding dynamic SQL. Web developers and database administrators should take appropriate security measures to protect against SQL Injection attacks.\\
+
+\subsection{How to prevent SQL Injection}
+\label{sec:orgd692a93}
+
+Preventing SQL Injection attacks requires a multi-layered approach, involving both web developers and database administrators. Here are some measures that can be taken to prevent SQL Injection:\\
+
+\begin{itemize}
+\item Parameterized queries and prepared statements: Web developers should use parameterized queries and prepared statements instead of dynamically building SQL statements with user inputs. Parameterized queries separate the SQL code from the input values, preventing malicious input from modifying the SQL statement. Prepared statements pre-compile the SQL statement, which can improve performance and prevent SQL Injection attacks.\\
+
+Golang example for parameterized query\\
+\begin{listing}[htbp]
+\begin{minted}[]{go}
+// Correct format for executing an SQL statement with parameters.
+rows, err := db.Query("SELECT * FROM user WHERE id = ?", id)
+// SECURITY RISK!
+rows, err := db.Query(fmt.Sprintf("SELECT * FROM user WHERE id = %s", id))
+\end{minted}
+\caption{Golang code example}
+\end{listing}
+
+\item Input validation and sanitization: Web developers should validate and sanitize all user inputs to ensure that they conform to expected formats and do not contain malicious code. This can include filtering out special characters, checking input length, and enforcing input types.\\
+
+\item Least privilege: Database administrators should limit the privileges of database users and ensure that they only have access to the data and functionality they need. This can prevent attackers from using SQL Injection to gain access to sensitive data or perform unauthorized actions.\\
+
+\item Avoid dynamic SQL: Web developers should avoid dynamically building SQL statements from user inputs whenever possible. This can reduce the risk of SQL Injection attacks.\\
+
+\item Keep software up-to-date: Both web developers and database administrators should keep their software up-to-date with the latest security patches and updates to prevent known vulnerabilities.\\
+
+\item Use a web application firewall (WAF): A WAF can help protect against SQL Injection attacks by filtering out malicious inputs and preventing unauthorized access to the database.\\
+\end{itemize}
+
+By implementing these measures, web developers and database administrators can significantly reduce the risk of SQL Injection attacks and improve the overall security of their web applications, most importantly tell the developer to properly code the application, not just let it be if it's done, do some unit testing also\\
+
+\section{Cross-site Scripting}
+\label{sec:org33d4c8a}
+
+Cross-site scripting (XSS) is a type of security vulnerability that can occur in web applications, including those that use databases. XSS attacks involve the insertion of malicious code, typically in the form of a script, into a web page viewed by other users. When a user visits the affected web page, the malicious script is executed in the user's web browser, allowing the attacker to steal sensitive data, such as login credentials or personal information, or perform unauthorized actions on behalf of the user.\\
+
+XSS attacks can occur in web applications that use databases when the application fails to properly validate user input or sanitize data before displaying it in a web page. For example, if a web application allows users to submit comments that are displayed on a web page, an attacker could insert a script in the comment that is executed when other users view the page.\\
+
+To prevent XSS attacks in database-driven web applications, web developers should implement proper input validation and sanitization techniques. This can include filtering out special characters, checking input length, and enforcing input types. Additionally, web developers should use encoding techniques to ensure that user input is properly displayed as plain text, rather than being interpreted as executable code.\\
+
+Database administrators can also play a role in preventing XSS attacks by ensuring that the database is properly configured and secure. This can include limiting user privileges, encrypting sensitive data, and monitoring database activity for signs of unauthorized access or malicious activity.\\
+
+Overall, preventing XSS attacks requires a multi-layered approach that involves both web developers and database administrators working together to ensure that web applications are secure and resistant to attacks.\\
+
+Example of common XSS pattern\\
+
+\begin{minted}[]{html}
+<script type=”text/javascript”>
+var test=’../example.php?cookie_data=’+escape(document.cookie);
+</script>
+\end{minted}
+
+\subsection{How to prevent XSS}
+\label{sec:orge87de6c}
+
+Preventing cross-site scripting (XSS) attacks requires a multi-layered approach that involves both web developers and database administrators. Here are some measures that can be taken to prevent XSS attacks:\\
+
+\begin{itemize}
+\item Input validation and sanitization: Web developers should validate and sanitize all user inputs to ensure that they conform to expected formats and do not contain malicious code. This can include filtering out special characters, checking input length, and enforcing input types.\\
+
+\item Output encoding: Web developers should use output encoding techniques to ensure that user input is properly displayed as plain text, rather than being interpreted as executable code. This can include HTML encoding, URL encoding, and JavaScript encoding.\\
+
+\item Content Security Policy (CSP): A Content Security Policy (CSP) is a security mechanism that can be used to prevent XSS attacks by allowing web developers to specify the sources of content that are allowed to be loaded on a web page. CSP can be used to block the execution of malicious scripts and other types of content that could be used in an XSS attack.\\
+
+\item HTTP-only cookies: Cookies that are marked as HTTP-only cannot be accessed by JavaScript, preventing attackers from stealing sensitive data such as session IDs or authentication tokens.\\
+
+\item Keep software up-to-date: Both web developers and database administrators should keep their software up-to-date with the latest security patches and updates to prevent known vulnerabilities.\\
+
+\item Use a web application firewall (WAF): A WAF can help protect against XSS attacks by filtering out malicious inputs and preventing unauthorized access to the database.\\
+\end{itemize}
+
+By implementing these measures, web developers and database administrators can significantly reduce the risk of XSS attacks and improve the overall security of their web applications.\\
+
+\section{Denial-of-Service}
+\label{sec:org1b9a720}
+
+A database DDoS (Distributed Denial of Service) attack is a type of cyber attack in which a large number of requests are sent to a database server with the intent of overwhelming its resources and rendering it unavailable to users.\\
+
+In a database DDoS attack, the attacker typically uses a network of compromised devices (also known as a botnet) to send a massive number of requests to the targeted database server. This flood of requests can quickly consume the server's resources, causing it to become unresponsive or crash.\\
+
+Database DDoS attacks can have serious consequences, including loss of data, business disruption, and financial loss. They can be difficult to detect and mitigate, as they often appear as legitimate traffic until the attack reaches a critical level.\\
+
+To prevent database DDoS attacks, database administrators should implement strong security measures, such as firewalls and intrusion detection systems, to monitor incoming traffic and block malicious requests. Additionally, regular backups should be made to ensure that data can be restored in the event of a successful attack.\\
+
+\subsection{How to prevent Database DDOS}
+\label{sec:orga87a604}
+
+Preventing database DDoS (Distributed Denial of Service) attacks requires a multi-layered approach that involves both database administrators and network security professionals. Here are some measures that can be taken to prevent database DDoS attacks:\\
+
+\begin{itemize}
+\item Use firewalls: A firewall can help protect the database from DDoS attacks by filtering out incoming traffic and blocking malicious requests. Firewalls should be configured to allow only authorized traffic to reach the database server.\\
+
+\item Implement intrusion detection/prevention systems (IDS/IPS): An IDS/IPS can help detect and prevent DDoS attacks by monitoring network traffic and identifying abnormal patterns or behaviors that may indicate an attack.\\
+
+\item Use rate limiting: Rate limiting can help prevent DDoS attacks by limiting the number of requests that are allowed to be made to the database server from a single IP address or user account.\\
+
+\item Monitor network traffic: Database administrators should regularly monitor network traffic to identify and respond to any suspicious activity or unusual traffic patterns that may indicate an ongoing DDoS attack.\\
+
+\item Implement load balancing: Load balancing can help distribute traffic across multiple servers, reducing the impact of a DDoS attack on any single server.\\
+
+\item Keep software up-to-date: Both database administrators and network security professionals should keep their software up-to-date with the latest security patches and updates to prevent known vulnerabilities that can be exploited in a DDoS attack.\\
+\end{itemize}
+
+By implementing these measures, database administrators and network security professionals can significantly reduce the risk of DDoS attacks and improve the overall security of their databases.\\
+
+\section{Bruteforce Attack}
+\label{sec:org68a68dc}
+
+A database brute force attack is a type of cyber attack in which an attacker attempts to gain unauthorized access to a database by trying a large number of password combinations until the correct one is found.\\
+\end{document}

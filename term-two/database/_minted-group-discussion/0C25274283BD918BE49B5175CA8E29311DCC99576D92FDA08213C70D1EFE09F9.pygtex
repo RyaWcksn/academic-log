@@ -1,0 +1,4 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{// Correct format for executing an SQL statement with parameters.}
+\PYG{n+nx}{rows}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{err}\PYG{+w}{ }\PYG{o}{:=}\PYG{+w}{ }\PYG{n+nx}{db}\PYG{p}{.}\PYG{n+nx}{Query}\PYG{p}{(}\PYG{l+s}{\PYGZdq{}SELECT * FROM user WHERE id = ?\PYGZdq{}}\PYG{p}{,}\PYG{+w}{ }\PYG{n+nx}{id}\PYG{p}{)}
+\end{Verbatim}

@@ -1,0 +1,97 @@
+% Created 2023-02-04 Sab 20:19
+% Intended LaTeX compiler: pdflatex
+\documentclass[a4paper,12pt]{report}
+  \usepackage{listings}
+  \makeatletter
+  \renewcommand{\maketitle}{
+    \begin{titlepage}
+      \begin{center}
+        \vspace*{2em}
+        \Huge \textbf{REPORT} \\
+        \vspace{4em}
+        \Huge \textbf{\@title} \\
+        \vspace{4em}
+        \Large \textbf{\@date} \\
+        \bigskip
+        \Large \textbf{\@author} \\
+        \medskip
+      \end{center}
+    \end{titlepage}
+  }
+  \makeatother
+  \usepackage[margin=0.7in]{geometry}
+\PassOptionsToPackage{hyphens}{url}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\usepackage{listings}
+\usepackage{parskip}
+\hypersetup{linktoc = all, colorlinks = true, urlcolor = DodgerBlue4, citecolor = PaleGreen1, linkcolor = black}
+\author{Pramudya Arya Wicaksana}
+\date{\today}
+\title{Concurrency\\\medskip
+\large Learning Golang concurrency pattern and usecases}
+\hypersetup{
+ pdfauthor={Pramudya Arya Wicaksana},
+ pdftitle={Concurrency},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 27.1 (Org mode 9.4.6)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+
+
+\chapter{Abstract}
+\label{sec:org66742dd}
+
+For this project, I choose to learn how Golang concurrency and what's the best use cases it might be implement
+
+The purpose of learning concurrency is make the application i create in future more scalable also more effective in many way, using standard Golang package to implement best practice of how Golang deal with threads and concurrent.
+
+For this research, the development will be using Test Driven Development of Golang, and for \emph{mocking} the application will be using \texttt{Testcontainer}
+
+\chapter{Requirements}
+\label{sec:org8b07758}
+
+This research require some following requirements to be fulfill, which are;
+
+\section{Operating system}
+\label{sec:org64b3c36}
+
+Author using \texttt{Ubuntu 22.04 LTS} for doing this research, any UNIX OS could be able to do this
+
+\section{GO}
+\label{sec:org59e14b7}
+
+Author using Golang version \texttt{1.19.5}, any version could be able to do concurrency, there's might be some different package name in every version
+
+\section{IDE}
+\label{sec:orgcebef4d}
+
+Author using \texttt{EMACS} for debugging and write the code, any text editor could be able to write Golang code
+
+\chapter{Application Details}
+\label{sec:org34b1906}
+
+\section{Overview}
+\label{sec:orga7dde44}
+
+The application provide some significant time complexity over non-concurrent application
+
+\section{Concurrency}
+\label{sec:org0adde85}
+
+\textbf{Concurrency} is a programming technique used to solve problems with many requests or many processes that are completed at the same time. The main characteristic of concurrent processes is that one process with another process cannot be carried out simultaneously on a particular resource. Usually one process alternates with another. Because it is very fast, it sometimes looks like it is done simultaneously.
+\end{document}

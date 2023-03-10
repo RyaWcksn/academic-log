@@ -1,0 +1,43 @@
+#+AUTHOR: Pramudya Arya Wicaksana
+#+TITLE: Concurrency
+#+SUBTITLE: Learning Golang concurrency pattern and usecases
+#+LATEX_CLASS: research
+#+STARTUP: inlineimages
+#+EXPORT_FILE_NAME: GOLANG_CONCURRENCY
+#+LATEX_HEADER: \usepackage{parskip}
+#+LaTeX_HEADER: \hypersetup{linktoc = all, colorlinks = true, urlcolor = DodgerBlue4, citecolor = PaleGreen1, linkcolor = black}
+
+
+* Abstract
+
+For this project, I choose to learn how Golang concurrency and what's the best use cases it might be implement
+
+The purpose of learning concurrency is make the application i create in future more scalable also more effective in many way, using standard Golang package to implement best practice of how Golang deal with threads and concurrent.
+
+For this research, the development will be using Test Driven Development of Golang, and for /mocking/ the application will be using =Testcontainer=
+
+* Requirements
+
+This research require some following requirements to be fulfill, which are;
+
+** Operating system
+
+Author using =Ubuntu 22.04 LTS= for doing this research, any UNIX OS could be able to do this
+
+** GO
+
+Author using Golang version =1.19.5=, any version could be able to do concurrency, there's might be some different package name in every version
+
+** IDE
+
+Author using =EMACS= for debugging and write the code, any text editor could be able to write Golang code
+
+* Application Details
+
+** Overview
+
+    The application provide some significant time complexity over non-concurrent application
+
+** Concurrency
+
+*Concurrency* is a programming technique used to solve problems with many requests or many processes that are completed at the same time. The main characteristic of concurrent processes is that one process with another process cannot be carried out simultaneously on a particular resource. Usually one process alternates with another. Because it is very fast, it sometimes looks like it is done simultaneously.
