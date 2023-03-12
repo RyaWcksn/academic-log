@@ -1,4 +1,4 @@
-% Created 2023-03-10 Jum 23:43
+% Created 2023-03-11 Sab 10:18
 % Intended LaTeX compiler: pdflatex
 \documentclass[11pt]{article}
 \usepackage[utf8]{inputenc}
@@ -71,7 +71,7 @@
 
 
 \section{Sql Injection}
-\label{sec:orga50eb9c}
+\label{sec:org04b08ac}
 
 SQL injection is a type of attack on a database-driven application that allows an attacker to execute unauthorized SQL commands by injecting malicious SQL statements into an application's input fields. SQL injection occurs when an attacker can input data into an application without proper input validation, such as input sanitization, and then that input is passed to the application's SQL query.\\
 
@@ -86,7 +86,7 @@ This code is designed to manipulate the application's SQL query by injecting a c
 SQL Injection attacks can be prevented through various measures such as using prepared statements with parameterized queries, validating and sanitizing user inputs, limiting database privileges, and avoiding dynamic SQL. Web developers and database administrators should take appropriate security measures to protect against SQL Injection attacks.\\
 
 \subsection{How to prevent SQL Injection}
-\label{sec:orgd692a93}
+\label{sec:org397d8b3}
 
 Preventing SQL Injection attacks requires a multi-layered approach, involving both web developers and database administrators. Here are some measures that can be taken to prevent SQL Injection:\\
 
@@ -118,7 +118,7 @@ rows, err := db.Query(fmt.Sprintf("SELECT * FROM user WHERE id = %s", id))
 By implementing these measures, web developers and database administrators can significantly reduce the risk of SQL Injection attacks and improve the overall security of their web applications, most importantly tell the developer to properly code the application, not just let it be if it's done, do some unit testing also\\
 
 \section{Cross-site Scripting}
-\label{sec:org33d4c8a}
+\label{sec:org09e7096}
 
 Cross-site scripting (XSS) is a type of security vulnerability that can occur in web applications, including those that use databases. XSS attacks involve the insertion of malicious code, typically in the form of a script, into a web page viewed by other users. When a user visits the affected web page, the malicious script is executed in the user's web browser, allowing the attacker to steal sensitive data, such as login credentials or personal information, or perform unauthorized actions on behalf of the user.\\
 
@@ -139,7 +139,7 @@ var test=’../example.php?cookie_data=’+escape(document.cookie);
 \end{minted}
 
 \subsection{How to prevent XSS}
-\label{sec:orge87de6c}
+\label{sec:org9c4fded}
 
 Preventing cross-site scripting (XSS) attacks requires a multi-layered approach that involves both web developers and database administrators. Here are some measures that can be taken to prevent XSS attacks:\\
 
@@ -160,7 +160,7 @@ Preventing cross-site scripting (XSS) attacks requires a multi-layered approach 
 By implementing these measures, web developers and database administrators can significantly reduce the risk of XSS attacks and improve the overall security of their web applications.\\
 
 \section{Denial-of-Service}
-\label{sec:org1b9a720}
+\label{sec:org1d2bbdb}
 
 A database DDoS (Distributed Denial of Service) attack is a type of cyber attack in which a large number of requests are sent to a database server with the intent of overwhelming its resources and rendering it unavailable to users.\\
 
@@ -171,7 +171,7 @@ Database DDoS attacks can have serious consequences, including loss of data, bus
 To prevent database DDoS attacks, database administrators should implement strong security measures, such as firewalls and intrusion detection systems, to monitor incoming traffic and block malicious requests. Additionally, regular backups should be made to ensure that data can be restored in the event of a successful attack.\\
 
 \subsection{How to prevent Database DDOS}
-\label{sec:orga87a604}
+\label{sec:orga7fb048}
 
 Preventing database DDoS (Distributed Denial of Service) attacks requires a multi-layered approach that involves both database administrators and network security professionals. Here are some measures that can be taken to prevent database DDoS attacks:\\
 
@@ -192,7 +192,32 @@ Preventing database DDoS (Distributed Denial of Service) attacks requires a mult
 By implementing these measures, database administrators and network security professionals can significantly reduce the risk of DDoS attacks and improve the overall security of their databases.\\
 
 \section{Bruteforce Attack}
-\label{sec:org68a68dc}
+\label{sec:org5b7956e}
 
 A database brute force attack is a type of cyber attack in which an attacker attempts to gain unauthorized access to a database by trying a large number of password combinations until the correct one is found.\\
+
+In a brute force attack, the attacker uses automated tools or scripts to rapidly generate and test different password combinations until the correct one is found. This method is time-consuming and requires a significant amount of computing power, but it can be effective against weak or easily guessed passwords.\\
+
+Once the attacker gains access to the database, they may be able to steal sensitive information, modify or delete data, or use the compromised account to launch further attacks. To prevent database brute force attacks, it is important to use strong passwords, limit login attempts, and implement other security measures such as two-factor authentication and encryption.\\
+
+\subsection{How to prevent Database Bruteforce attack}
+\label{sec:org73674f9}
+
+There are several ways to prevent database brute force attacks:\\
+
+\begin{itemize}
+\item Use strong passwords: Make sure that all user accounts in the database have strong passwords that are difficult to guess. A strong password should be at least 8-12 characters long, include a mix of upper and lower case letters, numbers, and special characters, and should not include common words or phrases.\\
+
+\item Implement account lockout policies: Set up your database to lock out users after a certain number of failed login attempts. This will prevent an attacker from using automated tools to repeatedly try different passwords.\\
+
+\item Use two-factor authentication: Two-factor authentication requires users to provide a second form of authentication, such as a security token or biometric factor, in addition to a password. This can significantly reduce the risk of a successful brute force attack.\\
+
+\item Use intrusion detection and prevention systems: These systems can detect and prevent brute force attacks by analyzing login attempts and blocking traffic from known malicious sources.\\
+
+\item Implement encryption: Encrypting sensitive data in the database can prevent an attacker from accessing it even if they do manage to gain access to the database.\\
+
+\item Regularly update and patch your database: Keep your database software up to date with the latest security patches to prevent known vulnerabilities from being exploited.\\
+\end{itemize}
+
+By implementing these measures, you can significantly reduce the risk of a successful database brute force attack.\\
 \end{document}
